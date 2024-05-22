@@ -7,10 +7,8 @@ function App() {
   const [showValue, setShowValue] = React.useState("");
   function handleClick(event) {
     const target = event.target.closest("[data-key]");
-    console.log("target: ", target);
     if (!target) return;
     const key = target.dataset.key;
-    console.log("key: ", key);
     if ("0123456789".includes(key)) {
       setShowValue(showValue + key);
     } else if (key === "C") {
